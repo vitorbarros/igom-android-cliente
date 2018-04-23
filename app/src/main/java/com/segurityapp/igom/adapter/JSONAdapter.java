@@ -17,43 +17,41 @@ public class JSONAdapter {
     private String type;
     private Gson gson;
 
-    public JSONAdapter(Response response, Entity entity, String type)
-    {
+    public JSONAdapter(Response response, Entity entity, String type) {
         this.response = response;
         this.entity = entity;
         this.type = type;
         this.gson = new Gson();
     }
 
-    public Entity parseToEntityObject() throws IOException
-    {
-        if(this.type.equals("object")){
+    public Entity parseToEntityObject() throws IOException {
+        if (this.type.equals("object")) {
             return this.toObject();
         }
         return null;
     }
 
-    private Entity toObject() throws IOException
-    {
+    private Entity toObject() throws IOException {
+
         Entity e = null;
 
-        try{
+        try {
 
             String json = this.response.body().string();
 
-            if(json != null){
+            if (json != null) {
 
                 JSONObject obj = new JSONObject(json);
 
-                if(obj.get("data") != null){
+                if (obj.get("data") != null) {
                     e = this.gson.fromJson(obj.get("data").toString(), this.entity.getClass());
-                }else{
+                } else {
                     e = this.gson.fromJson(obj.toString(), this.entity.getClass());
                 }
             }
 
 
-        }catch (JSONException exception){
+        } catch (JSONException exception) {
             //TODO IMPLEMENTAR
         }
 

@@ -4,7 +4,8 @@ import android.provider.BaseColumns;
 
 public class AccessTokenContract {
 
-    private AccessTokenContract() {}
+    private AccessTokenContract() {
+    }
 
     public static class AccessTokenEntry implements BaseColumns {
 

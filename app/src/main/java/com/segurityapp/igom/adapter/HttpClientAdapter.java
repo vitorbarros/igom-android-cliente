@@ -1,7 +1,5 @@
 package com.segurityapp.igom.adapter;
 
-import com.segurityapp.igom.entity.repository.AbstractRepository;
-
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -14,36 +12,46 @@ public class HttpClientAdapter {
     private String baseURI;
     private String endPoint;
     private String method;
-    private String headers;
+    private String authorization;
 
-    public HttpClientAdapter(MediaType mediaType, String json, String baseURI, String endPoint, String method)
-    {
-        if(this.http == null){
+    public HttpClientAdapter(MediaType mediaType, String json, String baseURI, String endPoint, String method, String authorization) {
+        if (this.http == null) {
             this.http = new OkHttpClient();
         }
 
-        if(this.requestBody == null){
+        if (this.requestBody == null) {
             this.requestBody = RequestBody.create(mediaType, json);
         }
 
         this.baseURI = baseURI;
         this.endPoint = endPoint;
         this.method = method;
+        this.authorization = authorization;
     }
 
-    public Request getAdapter(){
+    public Request getAdapter() {
 
-        switch (this.method){
-            case "POST" :
+        switch (this.method) {
+            case "POST":
 
-                return new Request
-                        .Builder()
-                        .addHeader("Content-type", "application/json")
-                        .url(this.baseURI + this.endPoint)
-                        .post(this.requestBody)
-                        .build();
+                if (this.authorization != null) {
+                    return new Request
+                            .Builder()
+                            .addHeader("Content-type", "application/json")
+                            .addHeader("Authorization", "Bearer " + this.authorization)
+                            .url(this.baseURI + this.endPoint)
+                            .post(this.requestBody)
+                            .build();
+                } else {
+                    return new Request
+                            .Builder()
+                            .addHeader("Content-type", "application/json")
+                            .url(this.baseURI + this.endPoint)
+                            .post(this.requestBody)
+                            .build();
+                }
 
-            case "GET" :
+            case "GET":
                 //TODO IMPLEMENTAR
                 break;
             case "PUT":

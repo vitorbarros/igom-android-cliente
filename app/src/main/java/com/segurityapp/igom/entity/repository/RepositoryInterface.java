@@ -2,7 +2,6 @@ package com.segurityapp.igom.entity.repository;
 
 import com.segurityapp.igom.entity.Entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface RepositoryInterface<T> {

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class Client extends Entity{
+public class Client extends Entity {
 
     @SerializedName("_id")
     private String _id;
@@ -20,12 +20,6 @@ public class Client extends Entity{
 
     @SerializedName("password")
     private String password;
-
-    @SerializedName("creditCard")
-    private ArrayList creditCard;
-
-    @SerializedName("address")
-    private ArrayList address;
 
     public String get_id() {
         return _id;
@@ -65,21 +59,5 @@ public class Client extends Entity{
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public ArrayList getCreditCard() {
-        return creditCard;
-    }
-
-    public void setCreditCard(ArrayList creditCard) {
-        this.creditCard = creditCard;
-    }
-
-    public ArrayList getAddress() {
-        return address;
-    }
-
-    public void setAddress(ArrayList address) {
-        this.address = address;
     }
 }
