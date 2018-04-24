@@ -90,6 +90,10 @@ public class Class_Login extends AppCompatActivity {
                 .newCall(httpClientAdapter.getAdapter())
                 .enqueue(new Callback() {
 
+                    Context context = getApplicationContext();
+                    CharSequence text = "Usuário ou senha incorretos";
+                    Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+
                     @Override
                     public void onFailure(@NonNull Call call, @NonNull IOException e) {
                         loginResult = false;
@@ -97,13 +101,10 @@ public class Class_Login extends AppCompatActivity {
                             @Override
                             public void run() {
                                 if (loginResult) {
-                                    Intent intent = new Intent(getApplicationContext(), Class_Cadastrar.class);
+                                    Intent intent = new Intent(getApplicationContext(), Class_Home_Services.class);
                                     finish();
                                     startActivity(intent);
                                 } else {
-                                    Context context = getApplicationContext();
-                                    CharSequence text = "Usuário ou senha incorretos";
-                                    Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
                                     toast.show();
                                 }
                             }
@@ -119,13 +120,10 @@ public class Class_Login extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     if (loginResult) {
-                                        Intent intent = new Intent(getApplicationContext(), Class_Cadastrar.class);
+                                        Intent intent = new Intent(getApplicationContext(), Class_Home_Services.class);
                                         finish();
                                         startActivity(intent);
                                     } else {
-                                        Context context = getApplicationContext();
-                                        CharSequence text = "Usuário ou senha incorretos";
-                                        Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
                                         toast.show();
                                     }
                                 }
@@ -139,13 +137,10 @@ public class Class_Login extends AppCompatActivity {
                                 public void run() {
 
                                     if (loginResult) {
-                                        Intent intent = new Intent(getApplicationContext(), Class_Cadastrar.class);
+                                        Intent intent = new Intent(getApplicationContext(), Class_Home_Services.class);
                                         finish();
                                         startActivity(intent);
                                     } else {
-                                        Context context = getApplicationContext();
-                                        CharSequence text = "Usuário ou senha incorretos";
-                                        Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
                                         toast.show();
                                     }
                                 }

@@ -109,8 +109,12 @@
         android:text="cadastre-se"
         android:textAllCaps="false"
         android:textColor="#fff"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="414dp" />
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toEndOf="@+id/esquecisenha"
+        app:layout_constraintTop_toBottomOf="@+id/facebook"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/esquecisenha"
