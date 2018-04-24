@@ -6,20 +6,21 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/perfil"
-            android:title="PERFIL" />
+            android:title="Perfil" />
         <item
             android:id="@+id/conta"
-            android:title="MINHA CONTA" />
+            android:title="Minha Conta" />
         <item
-            android:id="@+id/sair"
-            android:title="SAIR" />
+            android:id="@+id/perguntas"
+            android:title="Perguntas Frequentes" />
     </group>
 
     <item android:title="">
         <menu>
             <item
-                android:id="@+id/perguntas"
-                android:title="PERGUNTAS FREQUENTES" />
+                android:id="@+id/sair"
+                android:title="Sair" />
         </menu>
     </item>
+
 </menu>

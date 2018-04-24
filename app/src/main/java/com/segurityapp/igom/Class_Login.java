@@ -40,6 +40,12 @@ public class Class_Login extends AppCompatActivity {
         startActivity(intentl);
     }
 
+    public void indoParaEsqueceuASenha(View view) {
+        Intent intentl = new Intent(getApplicationContext(), Class_Esqueceu_Senha.class);
+        startActivity(intentl);
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -2,5 +2,25 @@
     <string name="app_name">IGOM_Cliente_1.0</string>
     <string name="title_activity_class__login">Class_Login</string>
     <string name="title_activity_class__cadastratar">Class_Cadastratar</string>
+    <string name="title_activity_class__home__services">Class_Home_Services</string>
+
+    <string-array name="spinner">
+        <item>1 hora de serviço</item>
+        <item>2 hora de serviço</item>
+        <item>3 hora de serviço</item>
+        <item>4 hora de serviço</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_class__esqueceu__senha">Class_Esqueceu_Senha</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>
