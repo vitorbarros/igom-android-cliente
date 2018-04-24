@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fundo"
+    android:background="#595958"
     tools:context="com.segurityapp.igom.Class_Cadastrar">
 
     <ImageView
@@ -20,14 +20,16 @@
 
     <ImageView
         android:id="@+id/imageToUpload"
-        android:layout_width="129dp"
-        android:layout_height="129dp"
+        android:layout_width="75dp"
+        android:layout_height="88dp"
         android:background="@drawable/galeria"
+        android:maxHeight="5dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
@@ -40,10 +42,25 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="indoParaLogin"
+        android:text="Voltar"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <Button
         android:id="@+id/button3"
         android:layout_width="265dp"
         android:layout_height="51dp"
         android:background="#666566"
+        android:onClick="indoParaHomeServices"
         android:text="confirmar cadastro"
         android:textAllCaps="false"
         android:textColor="#edece3"

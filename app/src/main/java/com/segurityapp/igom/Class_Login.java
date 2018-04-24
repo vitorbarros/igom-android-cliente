@@ -8,10 +8,21 @@ import android.widget.Button;
 
 public class Class_Login extends AppCompatActivity {
 
+    public void indoParaHomeServices(View view) {
+        Intent intentl = new Intent(getApplicationContext(), Class_Home_Services.class);
+        startActivity(intentl);
+    }
+
     public void indoParaDeCadastro(View view) {
         Intent intentl = new Intent(getApplicationContext(), Class_Cadastrar.class);
         startActivity(intentl);
     }
+
+    public void indoParaEsqueceuASenha(View view) {
+        Intent intentl = new Intent(getApplicationContext(), Class_Esqueceu_Senha.class);
+        startActivity(intentl);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

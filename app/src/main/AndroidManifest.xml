@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.segurityapp.igom">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -24,9 +29,29 @@
         <activity
             android:name=".Class_Cadastrar"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Class_Home_Services"
+            android:label="@string/title_activity_class__home__services"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Class_Esqueceu_Senha"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Class_Service_Fixo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Class_Solicitacao_Service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Class_Solicitacao_service_fixo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Class_Forma_Pagamento"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Class_Procurando_Protetor"
+            android:screenOrientation="portrait" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>

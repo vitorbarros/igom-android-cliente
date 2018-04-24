@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.io.File;
+
 public class Class_Cadastrar extends AppCompatActivity implements View.OnClickListener {
     private static final int RESULT_LOAD_IMAGE = 1;
     ImageView imageToUploaod;
@@ -21,7 +23,15 @@ public class Class_Cadastrar extends AppCompatActivity implements View.OnClickLi
 
         imageToUploaod.setOnClickListener(this);
     }
+    public void indoParaHomeServices(View view) {
+        Intent intentl = new Intent(getApplicationContext(), Class_Home_Services.class);
+        startActivity(intentl);
+    }
 
+    public void indoParaLogin(View view) {
+        Intent intentl = new Intent(getApplicationContext(), Class_Login.class);
+        startActivity(intentl);
+    }
 
     @Override
     public void onClick(View v) {
@@ -41,4 +51,6 @@ public class Class_Cadastrar extends AppCompatActivity implements View.OnClickLi
             imageToUploaod.setImageURI(selectedImage);
         }
     }
+
+
 }
